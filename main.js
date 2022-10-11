@@ -1,13 +1,18 @@
 const moreInfoButton = document.getElementById('more-info-btn');
-const moreInfoText = document.getElementById('more-info-text');
+const moreInfoContainer = document.getElementById('more-info-container');
+const moreInfoCloseButton = document.getElementById('more-info-close-btn');
 let show = false;
 
 moreInfoButton.addEventListener('click', () => {
   if (!show) {
     show = true
-    moreInfoText.classList.remove('d-none')
-  } else {
+    moreInfoContainer.classList.remove('d-none')
+  }
+})
+
+moreInfoCloseButton.addEventListener('click', () => {
+  if (show) {
     show = false
-    moreInfoText.classList.add('d-none')
+    moreInfoContainer.classList.add('d-none')
   }
 })
